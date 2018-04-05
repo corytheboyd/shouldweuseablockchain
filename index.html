@@ -15,11 +15,45 @@
       align-items: center;
       height: 100vh;
     }
+    .message {
+      position: absolute;
+    }
+    .parrot {
+      position: relative;
+      -webkit-animation: party 4s linear infinite;
+      -moz-animation: party 4s linear infinite;
+      -o-animation: party 4s linear infinite;
+      animation: party 4s linear infinite;
+    }
+    @-webkit-keyframes party {
+        from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+        to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+
+    @-moz-keyframes party {
+        from { -moz-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+        to   { -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+
+    @-o-keyframes party {
+        from { -o-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+        to   { -o-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
+
+    @keyframes party {
+        from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+        to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+    }
     </style>
 </head>
 <body>
 <div id="textContainer">
-  <h1>No.</h1>
+  <div class="message">
+    <h1>No.</h1>
+  </div>
+  <div class="parrot">
+    <img src="http://cultofthepartyparrot.com/parrots/hd/middleparrot.gif"/>
+  </div>
 </div>
 </body>
 </html>
